@@ -18,7 +18,8 @@ def main():
 			states_sentiment[state] = get_analysis(state)
 
 	#create a sorted list of states, by sentiment ration
-	print(states_sentiment)
+	sorted_states = sorted(states_sentiment.items(), key=operator.itemgetter(1))
+	print(sorted_states)
 
 	#Find companies with holdings by state
 	
